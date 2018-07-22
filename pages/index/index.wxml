@@ -1,13 +1,39 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='head'>
+    <image class='header' src='../../images/home_header.png'></image>
+    <view class="count">已有<text class="totalPlay">{{totalPlay}}</text>人挑战</view>
+    <view class='gameBtnArea'>
+      <view class="startGameArea">
+        <button bindtap='startTap' class="startGame" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开始答题</button>
+      </view>
+      <view class="startGameArea">
+        <button class="shareGame" >邀请好友机会+1</button>
+      </view>
+    </view>
+    <view class='rules'>游戏规则</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <image class="headback" src='../../images/home_back.png'></image>
+  <view class='panel'>
+    <view class='titleArea'>
+      <view class='title'>
+        <image class="headrange" src='../../images/home_range.png'></image>
+        <text>排行榜</text>
+        <image class="headrange" src='../../images/home_range.png'></image>
+      </view>
+    </view>
+    <view class='people'>
+      <view class='people-item' wx:key="{{item.range}}" wx:for="{{people}}">
+        <view class='id'>
+          <image class="portrait" src='{{item.portrait}}'></image>
+          <view wx:if="{{item.range==1}}" class='range1'>{{item.range}}</view>
+          <view wx:if="{{item.range==2}}"  class='range2'>{{item.range}}</view>
+          <view wx:if="{{item.range==3}}"  class='range3'>{{item.range}}</view>
+          <view wx:if="{{item.range!=1&&item.range!=2&&item.range!=3}}" class='range4'>{{item.range}}</view>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='reward'>{{item.reward}}个娃娃</view>
+      </view>
+    </view>
   </view>
 </view>

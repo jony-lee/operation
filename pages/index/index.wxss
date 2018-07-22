@@ -1,21 +1,235 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header {
+    width: 750rpx;
+    height: 428.3rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.head {
+    background: linear-gradient(#2639ee, #7aacf9);
+    height: 738rpx;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.headback {
+    width: 750rpx;
+    height: 171rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.count {
+    font-size: 24rpx;
+    color: white;
+    width: 750rpx;
+    height: 48rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.totalPlay {
+    display: inline;
+    font-weight: bold;
+}
+
+.gameBtnArea {
+    height: 204rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rules {
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 22rpx;
+    text-decoration: underline;
+    margin-top: 28rpx;
+}
+
+.startGameArea {
+    width: 750rpx;
+    height: 88rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.startGame {
+    transition: all 0.5s;
+    height: 86rpx;
+    width: 500rpx;
+    border-radius: 44rpx;
+    box-shadow: 0rpx 5rpx 5rpx #e29c00;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(#fccf4f, #fe9225);
+}
+
+.shareGame {
+    transition: all 0.5s;
+    height: 86rpx;
+    width: 500rpx;
+    border-radius: 44rpx;
+    box-shadow: 0rpx 5rpx 5rpx #3a7fc9;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(#6dc0fd, #438eeb);
+}
+
+.startGame:hover {
+    transform: scale(0.9, 0.9);
+}
+
+.shareGame:hover {
+    transform: scale(0.9, 0.9);
+}
+
+.rules:hover {
+    color: #518ddb;
+}
+
+.panel {
+    box-sizing: border-box;
+    background: white;
+    border-radius: 24rpx;
+    margin-right: 50rpx;
+    margin-left: 50rpx;
+    width: 650rpx;
+    box-shadow: 0rpx 8rpx 10rpx rgba(22, 33, 95, 0.1);
+    position: relative;
+    top: -130rpx;
+}
+
+.titleArea {
+    margin-top: 20rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24rpx;
+}
+
+.title {
+    width: 310rpx;
+    height: 48rpx;
+    text-align: center;
+    color: #0061fe;
+    font-size: 28rpx;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headrange {
+    width: 48rpx;
+    height: 29rpx;
+}
+
+.people {
+    margin-left: 68rpx;
+    margin-right: 50rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.people-item {
+    margin-bottom: 18rpx;
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.id {
+    width: auto;
+    height: 100%;
+    font-size: 28rpx;
+    color: #373c45;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.range1 {
+    height: 30rpx;
+    width: 30rpx;
+    border-radius: 50%;
+    background: linear-gradient(#fccf4f, #fe9225);
+    font-size: 22rpx;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -5rpx;
+}
+
+.range2 {
+    height: 30rpx;
+    width: 30rpx;
+    border-radius: 50%;
+    background: linear-gradient(#d1d1d1, #9e9e9e);
+    font-size: 22rpx;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -5rpx;
+}
+
+.range3 {
+    height: 30rpx;
+    width: 30rpx;
+    border-radius: 50%;
+    background: linear-gradient(#fca24f, #eb6c09);
+    font-size: 22rpx;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    left: -5rpx;
+}
+
+.range4 {
+    height: 30rpx;
+    width: 30rpx;
+    color: white;
+}
+
+.reward {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #373c45;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.portrait {
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    z-index: 3;
 }

@@ -1,0 +1,207 @@
+.container {
+    background: linear-gradient(#2436ee, #8ec7fb);
+    height: 100%;
+    width: 100%;
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+}
+
+.logo {
+    height: 120rpx;
+    width: 328rpx;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 54rpx;
+}
+
+.flexArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.question {
+    flex-grow: 1;
+    border-radius: 24rpx;
+    background: white;
+    box-shadow: 0rpx 8rpx 10rpx rgba(4, 19, 158, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 86rpx;
+    box-sizing: border-box;
+}
+
+.mainGame {
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer {
+    width: 100%;
+    box-sizing: border-box;
+    height: 60rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeBack {
+    width: 100%;
+    box-sizing: border-box;
+    height: 20rpx;
+    border-radius: 10rpx;
+    background: #f4f4f4;
+}
+
+.time {
+    width: 426rpx;
+    height: 20rpx;
+    border-radius: 10rpx;
+    background: linear-gradient(90deg, #ffde26, #fea631);
+    box-shadow: 0rpx 4rpx 4rpx rgba(255, 177, 39, 0.5);
+    position: relative;
+    top: -20rpx;
+    z-index: 10;
+}
+
+.equation {
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.eqHead {
+    width: 100%;
+    box-sizing: border-box;
+    height: 150rpx;
+    background: #f4f4f4;
+    border-radius: 10rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 80rpx;
+    font-weight: bold;
+    color: #373c45;
+}
+
+.answer {
+    width: 100%;
+    box-sizing: border-box;
+    height: 220rpx;
+    font-size: 200rpx;
+    font-weight: bold;
+    color: #0061fe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.decoration {
+    height: 162rpx;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #373c45;
+    font-size: 24rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game_dec {
+    height: 162rpx;
+    width: 162rpx;
+}
+
+.hint {
+    box-sizing: border-box;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    width: 100%;
+    height: 72rpx;
+    background: linear-gradient(#ffde26, #fea631);
+    border-radius: 10rpx;
+    box-shadow: 0rpx 4rpx 20rpx rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2rpx 18px 2rpx rgba(255, 255, 255, 0.4) inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.trump {
+    height: 42rpx;
+    width: 48rpx;
+    margin-right: 40rpx;
+}
+
+.hintText {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0rpx 4rpx 2rpx rgba(255, 163, 29, 0.8);
+}
+
+.btnArea {
+    height: 306rpx;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40rpx;
+}
+
+.trueArea {
+    transition: all 0.8s;
+    box-sizing: border-box;
+    height: 306rpx;
+    width: 306rpx;
+    border: 10rpx solid white;
+    border-radius: 24rpx;
+    background: linear-gradient(#9af8ff, #81e0ff);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnIcon {
+    height: 224rpx;
+    width: 224rpx;
+}
+
+.falseArea {
+    transition: all 0.8s;
+    box-sizing: border-box;
+    height: 306rpx;
+    width: 306rpx;
+    border: 10rpx solid white;
+    border-radius: 24rpx;
+    background: linear-gradient(#ff9a9a, #fb7299);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.falseArea:hover {
+    transform: scale(0.9, 0.9);
+}
+
+.trueArea:hover {
+    transform: scale(0.9, 0.9);
+}

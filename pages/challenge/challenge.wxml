@@ -1,0 +1,40 @@
+<view class='container'>
+    <image class='logo' src='../../images/logo.png'></image> 
+    <view class='flexArea'>
+        <view class='question'>
+            <view class='mainGame'>
+                <view class='timer'>
+                    <view class='timeBack'></view>
+                    <view class='time'></view>
+                </view>
+                <view class='equation'>
+                    <view class='eqHead'>
+                        <text>{{eqHead}}</text>
+                    </view>
+                    <view class='answer'>
+                        <text>{{answer}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class='decoration'>
+                <image class='game_dec' src='../../images/game_dec_l.png'></image>
+                <text>已答{{loc}}/40题</text>
+                <image class='game_dec' src='../../images/game_dec_r.png'></image>
+            </view>
+        </view>
+        <view class='hint'>
+            <image class='trump' src='../../images/trump.png'></image>
+            <view class='hintText'>
+                <text>答对40题领奖品</text>
+            </view>
+        </view>
+        <view class='btnArea'>
+            <view class='trueArea'>
+                <image class='btnIcon' src='../../images/true.png'></image> 
+            </view>
+            <view class='falseArea'>
+                <image class='btnIcon' src='../../images/false.png'></image> 
+            </view>
+        </view>
+    </view>        
+</view>
