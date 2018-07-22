@@ -2,13 +2,29 @@
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
+        "pages/my/my",
         "pages/challenge/challenge"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "",
         "navigationBarTextStyle": "black",
-        "navigationStyle": "custom"
+        "navigationStyle": "custom",
+        "backgroundColor": "#f5f8fd"
+    },
+    "tabBar": {
+        "color": "#999ba1",
+        "selectedColor": "#2639ee",
+        "borderStyle": "white",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "挑战首页"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "个人中心"
+            }
+        ]
     }
 }

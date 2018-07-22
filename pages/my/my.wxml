@@ -1,0 +1,42 @@
+<view class='container'>
+    <view class='head'>
+        <open-data class='profImg' type="userAvatarUrl"></open-data>
+        <view class='ahead'>
+            <view>
+                <open-data class='NickName' type="userNickName"></open-data><text>,领取{{rewardNum}}个娃娃</text>
+            </view>    
+            <view class='btn'>
+                <text>挑战机会+1</text>
+            </view>
+        </view>
+        <view class='headFoot'>
+            <view class='footbody'>
+                <view class='score'>
+                    <text>最高分：{{score}}分</text>
+                </view>
+                <view class='cline'></view>
+                <view class='score'>
+                    <text>挑战机会：{{chance}}次</text>
+                </view>
+                <view class='cline'></view>
+                <view class='score'>
+                    <text>奖品列表</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='body'>
+        <view class='mainBody'>
+            <view wx:for="{{gameList}}" class='panel'>
+                <image class='potrait' src='{{item.img}}'></image>
+                <view class='textArea'>
+                    <text>{{item.name}}</text>
+                    <text class='depict'>{{item.intro}}</text>
+                </view>
+                <view class='bodyBtn'>
+                    <text>打开</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
