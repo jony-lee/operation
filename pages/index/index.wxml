@@ -8,7 +8,7 @@
         <button bindtap='startTap' class="startGame" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开始答题</button>
       </view>
       <view class="startGameArea">
-        <button class="shareGame" >邀请好友机会+1</button>
+        <button bindtap="shareGame" class="shareGame" >邀请好友机会+1</button>
       </view>
     </view>
     <view class='rules'>游戏规则</view>

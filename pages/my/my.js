@@ -89,5 +89,10 @@ Page({
      */
     onShareAppMessage: function() {
 
+    },
+    toList: function() {
+        wx.navigateTo({
+          url: '../giftlist/giftlist',
+        })
     }
 })

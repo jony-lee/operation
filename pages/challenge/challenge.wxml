@@ -5,14 +5,14 @@
             <view class='mainGame'>
                 <view class='timer'>
                     <view class='timeBack'></view>
-                    <view class='time'></view>
+                    <view class='time' style='width:{{remainTime*(580/100)}}rpx'></view>
                 </view>
                 <view class='equation'>
                     <view class='eqHead'>
-                        <text>{{eqHead}}</text>
+                        <text>{{gameList[loc].eqHead}}</text>
                     </view>
                     <view class='answer'>
-                        <text>{{answer}}</text>
+                        <text>{{gameList[loc].eqAnswer}}</text>
                     </view>
                 </view>
             </view>
@@ -28,11 +28,11 @@
                 <text>答对40题领奖品</text>
             </view>
         </view>
-        <view class='btnArea'>
-            <view class='trueArea'>
+        <view class='btnArea' bindtap="countInterval">
+            <view class='trueArea' bindtap="trueBtn">
                 <image class='btnIcon' src='../../images/true.png'></image> 
             </view>
-            <view class='falseArea'>
+            <view class='falseArea' bindtap="falseBtn">
                 <image class='btnIcon' src='../../images/false.png'></image> 
             </view>
         </view>

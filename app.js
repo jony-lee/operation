@@ -1,39 +1,41 @@
 //app.js
+const Promise = require('utils/promise.js');
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
+    onLaunch: function() {
+      var app=this
+        wx.login({
+            success: function(res) {
+                if (res.code) {
+                    //发起网络请求
+                    wx.request({
+                      url: 'https://yimuke.cn:8080/minus_stars/login/', //获取用户基本信息api
+                        data: {
+                            code: res.code
+                        },
+                        success: function(res) {
+                            //服务器解密后，客户端收到基本信息
+                            console.log(res)
+                            app.globalData.rewardNum = res.data
+                            app.globalData.chance = res.data
+                            app.globalData.score = res.data
+                            app.globalData.userID = res.data
+                        },
+                        fail: function() {}
+                    })
+                } else {
+                    reject('error');
+                    console.log('登录失败！' + res.errMsg)
+                } //服务器将存储用户code
             }
-          })
-        }
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
-  }
+        })
+    },
+    //获取基本信息方法
+
+    globalData: {
+        rewardNum: 0, //获得奖励个数
+        chance: 0, //剩余机会
+        score: 0, //最高分
+        userID: '',
+        hasShowRule: true
+    }
 })

@@ -1,0 +1,33 @@
+<view class='head'>
+        <view class='headfootA'>
+                <view wx:for="{{navbar}}" data-idx="{{item.index}}" class="headfoot {{currentTab==item.index ? 'active' : ''}}" wx:key="{{item.index}}" bindtap="navbarTap">{{item.name}}</view>
+        </view>
+    </view>
+<view class='container'>  
+    <view wx:if="{{currentTab==1}}" class='gift'>
+        <view data-id='{{item.id}}' wx:key="{{item.id}}" bindtap="tapCard"  wx:for="{{gift}}" class='card'>
+            <image class='cardImg' src='{{item.src}}'></image>
+            <view class='cardfoot'>
+                <view class='footL'>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class='footR'>
+                    <text>查看详情</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{currentTab==2}}" class='myGift'>
+        <view data-id='{{item.id}}' bindtap="toMyDetail" wx:for="{{mygift}}"  wx:key="{{item.id}}" class='card'>
+            <image class='cardImg' src='{{item.src}}'></image>
+            <view class='cardfoot'>
+                <view class='footL'>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class='footR'>
+                    <text>查看详情</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

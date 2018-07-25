@@ -19,7 +19,7 @@
                     <text>挑战机会：{{chance}}次</text>
                 </view>
                 <view class='cline'></view>
-                <view class='score'>
+                <view bindtap="toList" class='score'>
                     <text>奖品列表</text>
                 </view>
             </view>

@@ -1,0 +1,110 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx;
+}
+
+.head {
+    height: 240rpx;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(90deg, #8ec7fb, #2436ee);
+    box-shadow: 0rpx 8rpx 10rpx rgba(0, 38, 114, 0.2);
+}
+
+.headfoot {
+    height: 80rpx;
+    width: 240rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.headfootA {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+    justify-content: space-around;
+}
+
+.active {
+    height: 80rpx;
+    width: 240rpx;
+    background: white;
+    color: #2a3eef;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rpx 8rpx 10rpx rgba(0, 38, 114, 0.1);
+}
+
+.card {
+    height: 280rpx;
+    width: 650rpx;
+    border-radius: 24rpx;
+    box-shadow: 0rpx 6rpx 10rpx rgba(0, 38, 114, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30rpx;
+}
+
+.cardImg {
+    height: 210rpx;
+    width: 650rpx;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx;
+}
+
+.cardfoot {
+    width: 650rpx;
+    height: 70rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footL {
+    width: 410rpx;
+    height: 70rpx;
+    border-bottom-left-radius: 24rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #373c45;
+    background: white;
+    padding-left: 30rpx;
+}
+
+.footR {
+    width: 240rpx;
+    height: 70rpx;
+    border-bottom-right-radius: 24rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #8ec7fb, #2436ee);
+}

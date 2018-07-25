@@ -60,7 +60,6 @@
 }
 
 .time {
-    width: 426rpx;
     height: 20rpx;
     border-radius: 10rpx;
     background: linear-gradient(90deg, #ffde26, #fea631);
